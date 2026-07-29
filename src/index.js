@@ -20,7 +20,7 @@ app.use(profileRoutes);
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8002;
 
 initDb()
   .then(() => {
