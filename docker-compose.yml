@@ -22,7 +22,7 @@ services:
     volumes:
       - profile-db-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_profile} -d profile_db"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d profile_db"]
       interval: 5s
       timeout: 3s
       retries: 10
